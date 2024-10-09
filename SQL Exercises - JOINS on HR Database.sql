@@ -286,9 +286,11 @@ SELECT e.first_name, e.last_name, d.department_name, l.city, l.state_province
 
 /* 3. Write a query in SQL to display all departments including those where does not have any employee. */
 
-SELECT 
-  FROM 
-  LEFT JOIN 
-    ON 
-
+SELECT d.DEPARTMENT_ID, 
+       d.DEPARTMENT_NAME, 
+       e.FIRST_NAME, 
+       e.LAST_NAME
+  FROM departments d
+  LEFT JOIN employees e
+    ON d.DEPARTMENT_ID = e.DEPARTMENT_ID;
 
